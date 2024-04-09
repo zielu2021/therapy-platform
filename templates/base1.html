@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>At home psicologia</title>
+    <link rel="icon" href="{% static 'images/logo.png' %}">
+    <!-- Bootstrap 4.5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Option 1: Include in HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    
+    <!-- font awesome icons in footer -->
+    <script src="https://kit.fontawesome.com/670e69ae74.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+
+    <!-- option with moving text -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="col-12 text-center">
+                <p class="scrolling-text">
+                    <a href="https://wa.me/34619555440" target="_blank" rel="noopener noreferrer">
+                        <span>{% trans "Click here >> and take your 20% discount for first therapy"%}!!!</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- End Top Bar -->
+
+
+    <!-- Navigation -->
+    <nav class="navbar bg-light navbar-light navbar-expand-lg sticky-top">
+        <div class="container">
+
+            <a href="{% url 'home' %}" class="navbar-brand"><img src="{% static 'images/logo.png' %}" alt="Logo"
+                    title="Logo"></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="{% url 'home' %}" class="nav-link">{% trans 'Home' %}</a></li>
+                    <li class="nav-item"><a href="{% url 'service' %}" class="nav-link">{% trans 'Services' %}</a></li>
+                    <li class="nav-item"><a href="{% url 'bookingIndex' %}" class="nav-link">{% trans 'Booking' %}</a></li>
+                    <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">{% trans 'Contact' %}</a></li>
+                    <li class="nav-item"><a href="{% url 'blog_index' %}" class="nav-link">{% trans 'Blog' %}</a></li>
+
+                    
+                    {% if user.is_authenticated %}
+                    <!-- User is authenticated, show User Panel dropdown -->
+                    <li class="nav-item">
+                        <!-- User Panel Dropdown -->
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                {% trans 'User' %}
+                            </button>
+                            <ul class="dropdown-menu text-center">
+                                <span class="d-block">{% trans 'Hi' %} {{user.first_name}}!</span>
+                                <li><a class="dropdown-item" href="{% url 'userPanel' %}">{% trans 'My Panel' %}</a></li>
+                                {% if user.is_staff %}
+                                    <li><a class="dropdown-item" href="{% url 'staffPanel' %}">Admin</a></li>
+                                {% endif %}
+                                <li><hr class="dropdown-divider"></li>
+                                <li class="text-center">
+                                    <form action="{% url 'account_logout' %}" method="post" | crispy>
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-danger">{% trans 'Logout' %}</button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a href="{% url 'account_login' %}" class="nav-link" style="color: #1ab3c7;">{% trans 'Login' %}</a>
+                    </li>
+                    {% endif %}
+                </ul>
+
+
+                <!-- Language Switcher -->
+                <div class="dropdown">
+                    <button class="btn btn-light dropdown-toggle border-0 text-muted" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-globe text-info" style="font-size: 1.5rem;"></i>
+                    </button>
+                    
+                    <form action="{% url 'set_language' %}" method="post" id="language-form">
+                        {% csrf_token %}
+                        <input name="next" type="hidden" value="{{ request.path }}">
+                        <select name="language" id="language-selector" class="hidden-select" style="display: none;">
+                            {% get_current_language as current_language %}
+                            {% get_available_languages as available_languages %}
+                            {% get_language_info_list for available_languages as languages %}
+                            {% for language in languages %}
+                                {% if language.code == 'en' or language.code == 'es' %}
+                                    <option value="{{ language.code }}" {% if language.code == current_language %}selected{% endif %}></option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </form>
+                
+                    <div class="custom-options">
+                        <ul class="dropdown-menu custom-dropdown-menu" style="min-width: auto;" aria-labelledby="dropdownMenu2">
+                            <li>
+                                <a href="#" class="dropdown-item custom-option" data-value="en" onclick="toggleLanguage('en')">
+                                    <img src="{% static 'images/flags/en.png' %}" style="max-width: 30px; height: auto;" alt="English">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item custom-option" data-value="es" onclick="toggleLanguage('es')">
+                                    <img src="{% static 'images/flags/es.png' %}" style="max-width: 30px; height: auto;" alt="Spanish">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    {% if messages %}
+    <div class="container-fluid fixed-top">
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-8">
+                {% for message in messages %}
+                    <div class="alert alert-custom alert-dismissible fade show text-center" role="alert">
+                        <h3 class="display-4 text-custom">{{ message }}</h3>
+                        <button type="button" class="btn-close fs-1 position-absolute top-50 start-0 translate-middle-y" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+
+
+
+        <footer>
+            <div class="container">
+                <div class="row text-light text-center py-4 justify-content-center">
+        
+                    <div class="col-sm-10 col-md-8 col-lg-6">
+                        <img src="{% static 'images/footer1.png' %}" alt="" class="w-25">
+                        <p>AT HOME PSICOLOGÍA<br>{% trans "We don't read minds, but we help you understand your own." %}</p>
+                        <ul class="social pt-3">
+                            <li><a href="https://www.instagram.com/athomepsicologia/?ref=53pwep&hl=af" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/at.home.psicologia" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="https://wa.me/34619555440" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Centered Pages Section -->
+                    <div class="col-sm-10 col-md-8 col-lg-2">
+                        <div class="pages">
+                            <h5>{% trans 'Pages' %}</h5>
+                            <ul>
+                                <li><a href="{% url 'home' %}">{% trans 'Home' %}</a></li>
+                                <li><a href="{% url 'service' %}">{% trans 'Services' %}</a></li>
+                                <li><a href="{% url 'bookingIndex' %}">{% trans 'Booking' %}</a></li>
+                                <li><a href="{% url 'contact' %}">{% trans 'Contact' %}</a></li>
+                                <li><a href="{% url 'blog_index' %}">{% trans 'Blog' %}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                    <!-- Left Open Hours Section -->
+                    <div class="col-sm-10 col-md-8 col-lg-2 text-left">
+                        <div class="open-hours">
+                            <h5>{% trans 'Open Hours' %}</h5>
+                            <p>{% trans 'Monday-Friday' %} 8:00 - 20:00<br>{% trans 'Saturday' %} 9:00 - 14:00</p>
+                        </div>
+                    </div>
+        
+                    <!-- Right Legal Notice Section -->
+                    <div class="col-sm-10 col-md-8 col-lg-2 text-right">
+                        <p><a href="#">{% trans 'Legal notice, privacy and cookies'%}</a></p>
+                    </div>
+        
+                </div>
+            </div>
+
+
+            <div class="whatsapp-button-wrapper">
+                <!-- WhatsApp button for mobile view -->
+                <div class="whatsapp-button-mobile">
+                    <a href="https://wa.me/34619555440" target="_blank" rel="noopener noreferrer">
+                        <img src="{% static 'images/whatsapp_button_3.png' %}" alt="WhatsApp">
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+
+
+        <!-- Start Socket -->
+        <div class="socket text-light text-center py-3">
+            <p>&copy; <a href="https://athomepsicologia.com" target="_blank">athomepsicologia.com</a></p>
+        </div>
+        <!-- End Socket -->
+
+
+
+        <!-- Script Source Files -->
+        <!-- JavaScript for Language Switcher -->
+        <script>
+            document.getElementById('language-button').addEventListener('click', function() {
+                const menu = document.getElementById('language-menu');
+                menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+            });
+
+
+            function toggleLanguage(code) {
+                const hiddenSelect = document.querySelector('.hidden-select');
+                
+                if (code === 'en') {
+                    hiddenSelect.value = 'en';
+                } else {
+                    hiddenSelect.value = 'es';
+                }
+
+
+                document.getElementById('language-form').submit();
+            }
+
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- End Script Source Files -->
+</body>
+
+</html>

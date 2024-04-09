@@ -1,0 +1,46 @@
+{% extends 'base1.html' %}
+{% load i18n %}
+{% load static %}
+{% block title %}Online Booking{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="col-12 text-center">
+        <h1 class="text-dark pt-4">{% trans 'Booking Panel' %}</h1>
+        <div class="border-top border-primary w-25 mx-auto"></div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10"> 
+            <section>
+                <div class="shadow p-4 mb-5 bg-body bg-body rounded text-black text-center m-5"> 
+                    <form method="post" action="{% url 'booking' %}" class="me-2 ms-2" required>
+                        {% csrf_token %}
+
+                        <h3 class="text-center fPersian mt-4">{% trans 'Select Service' %}:</h3>
+                        <div>
+                            <select class="form-select fs-3 text-center" name="service"> 
+                                <option value="50 mins Online Therapy- Individual">{% trans '50 mins Online Therapy- Individual' %}</option>
+                                <option value="50 mins Online Therapy- Couples">{% trans '50 mins Online Therapy- Couples' %}</option>
+                            </select>
+                        </div>
+
+                        <h3 class="text-center fPersian mt-4">{% trans 'Select Day' %}:</h3>
+                        <div>
+                            <select class="form-select fs-3 text-center" name="day"> 
+                                {% for validateWeekday in validateWeekdays %}
+                                <option value="{{validateWeekday}}">{{validateWeekday}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary text-white mt-3 fPersian">Submit</button>
+
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

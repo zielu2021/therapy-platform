@@ -1,0 +1,1576 @@
+[
+    {
+        "fields": {
+            "date_joined": "2024-03-07T08:14:13Z",
+            "email": "szczepan.zielinski05@gmail.com",
+            "first_name": "Szczepan",
+            "groups": [],
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": true,
+            "last_login": "2024-03-07T17:44:29.483Z",
+            "last_name": "Zielinski",
+            "password": "pbkdf2_sha256$720000$peDTM5cZmPKbilb39J7ua3$pxjPI/S4tcczKUCvupw74FLKP+tnhNV0Mk+jH1q2SoU=",
+            "user_permissions": [],
+            "username": "szczepanzielinski"
+        },
+        "model": "accounts.customuser",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "date_joined": "2024-03-07T08:25:49Z",
+            "email": "darekkk@wp.pl",
+            "first_name": "Dariusz",
+            "groups": [],
+            "is_active": true,
+            "is_staff": false,
+            "is_superuser": false,
+            "last_login": null,
+            "last_name": "Darecki",
+            "password": "admin123!",
+            "user_permissions": [],
+            "username": "darekkk"
+        },
+        "model": "accounts.customuser",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "date_joined": "2024-03-07T08:26:28Z",
+            "email": "yanisoto@gmail.com",
+            "first_name": "Yanira",
+            "groups": [],
+            "is_active": true,
+            "is_staff": false,
+            "is_superuser": false,
+            "last_login": null,
+            "last_name": "Soto",
+            "password": "admin123!",
+            "user_permissions": [],
+            "username": "yanisoto"
+        },
+        "model": "accounts.customuser",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "date_joined": "2024-03-07T17:34:57.925Z",
+            "email": "zszczep@wp.pl",
+            "first_name": "Username",
+            "groups": [],
+            "is_active": true,
+            "is_staff": false,
+            "is_superuser": false,
+            "last_login": "2024-03-07T17:36:19.632Z",
+            "last_name": "Userlastname",
+            "password": "pbkdf2_sha256$720000$t3Px0kZ20MGlblXm2aS5q2$lIitn6OTbO0fWNEl7xzyTIzJ6DcosZuzJb2AqYGIDQI=",
+            "user_permissions": [],
+            "username": "testuser"
+        },
+        "model": "accounts.customuser",
+        "pk": 7
+    },
+    {
+        "fields": {
+            "author": 3,
+            "created_on": "2024-03-07T08:36:47.448Z",
+            "last_modified": "2024-03-07T08:36:47.448Z",
+            "rating": 5,
+            "text": "¡No puedo recomendar \"At Home Psychology\" lo suficiente! La conveniencia de acceder a apoyo psicológico profesional desde la comodidad de mi hogar ha sido un cambio de juego. La plataforma es fácil de usar, y los psicólogos no solo están altamente calificados sino también llenos de compasión. La flexibilidad para programar sesiones me ha permitido priorizar mi salud mental sin comprometer mi rutina diaria. Si estás buscando servicios de psicología en línea confiables y accesibles, ¡no busques más!"
+        },
+        "model": "reviews.review",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "author": 2,
+            "created_on": "2024-03-07T08:37:07.153Z",
+            "last_modified": "2024-03-07T08:37:07.153Z",
+            "rating": 5,
+            "text": "At Home Psychology\" provides an exceptional online counseling experience. The therapists are not only highly skilled but also genuinely empathetic. The virtual sessions are conducted seamlessly, creating a safe space for open discussions. The platform's privacy features enhance the confidentiality of the sessions. I appreciate the personalized approach to my mental well-being, making each session tailored to my specific needs. This service has been a valuable resource in my journey towards better mental health."
+        },
+        "model": "reviews.review",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "author": 1,
+            "created_on": "2024-03-07T08:37:31.830Z",
+            "last_modified": "2024-03-07T08:37:31.830Z",
+            "rating": 4,
+            "text": "At Home Psychology\" ha sido una verdadera bendición en mi vida. La facilidad de acceder a apoyo psicológico desde la comodidad de mi hogar ha marcado la diferencia. Los psicólogos son profesionales excepcionales, brindando no solo conocimientos sólidos, sino también un enfoque cálido y comprensivo. La plataforma es fácil de usar, y las sesiones en línea son fluidas y efectivas. La flexibilidad en los horarios me ha permitido ajustar las sesiones a mi agenda ocupada. Recomiendo encarecidamente \"At Home Psychology\" a quienes buscan un apoyo psicológico de calidad y conveniente"
+        },
+        "model": "reviews.review",
+        "pk": 4
+    },
+    {
+        "fields": {
+            "author": 7,
+            "created_on": "2024-03-07T18:07:18.001Z",
+            "last_modified": "2024-03-07T18:07:18.001Z",
+            "rating": 3,
+            "text": "review of testuser that can be edited or removed. You need to go to all testimonials and edit review or delete"
+        },
+        "model": "reviews.review",
+        "pk": 5
+    },
+    {
+        "fields": {
+            "day": "2024-03-07",
+            "service": "50 mins Online Therapy- Individual",
+            "time": "11 AM",
+            "time_ordered": "2024-03-07T08:34:04.620Z",
+            "user": 3
+        },
+        "model": "booking.appointment",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "day": "2024-03-07",
+            "service": "50 mins Online Therapy- Individual",
+            "time": "3 PM",
+            "time_ordered": "2024-03-07T08:34:11.514Z",
+            "user": 1
+        },
+        "model": "booking.appointment",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "day": "2024-03-08",
+            "service": "50 mins Online Therapy- Individual",
+            "time": "8 AM",
+            "time_ordered": "2024-03-07T08:34:29.881Z",
+            "user": 3
+        },
+        "model": "booking.appointment",
+        "pk": 4
+    },
+    {
+        "fields": {
+            "day": "2024-03-10",
+            "service": "50 mins Online Therapy- Individual",
+            "time": "8 AM",
+            "time_ordered": "2024-03-07T08:55:40.592Z",
+            "user": 3
+        },
+        "model": "booking.appointment",
+        "pk": 5
+    },
+    {
+        "fields": {
+            "day": "2024-03-20",
+            "service": "50 mins Online Therapy- Individual",
+            "time": "8 AM",
+            "time_ordered": "2024-03-07T17:37:53.392Z",
+            "user": 7
+        },
+        "model": "booking.appointment",
+        "pk": 6
+    },
+    {
+        "fields": {
+            "day": "2024-03-07",
+            "service": "50 mins Online Therapy- Individual",
+            "time": "8 PM",
+            "time_ordered": "2024-03-07T17:43:15.140Z",
+            "user": 7
+        },
+        "model": "booking.appointment",
+        "pk": 7
+    },
+    {
+        "fields": {
+            "day": "2024-03-28",
+            "service": "50 mins Online Therapy- Individual",
+            "time": "4 PM",
+            "time_ordered": "2024-03-07T17:43:48.593Z",
+            "user": 7
+        },
+        "model": "booking.appointment",
+        "pk": 8
+    },
+    {
+        "fields": {
+            "day": "2024-03-20",
+            "service": "50 mins Online Therapy- Individual",
+            "time": "9 AM",
+            "time_ordered": "2024-03-07T17:45:02.933Z",
+            "user": 7
+        },
+        "model": "booking.appointment",
+        "pk": 9
+    },
+    {
+        "fields": {
+            "day": "2024-03-22",
+            "service": "50 mins Online Therapy- Individual",
+            "time": "2 PM",
+            "time_ordered": "2024-03-07T17:45:34.929Z",
+            "user": 7
+        },
+        "model": "booking.appointment",
+        "pk": 10
+    },
+    {
+        "fields": {
+            "pdf_file": "pdfs/2024/03/07/STEPS_PF_THERAPY.pdf",
+            "title": "test file"
+        },
+        "model": "home.pdffile",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "name": "Family Ties",
+            "name_es": "Vínculos Familiares"
+        },
+        "model": "blog.category",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "name": "Mindful Moments",
+            "name_es": "Momentos Conscientes"
+        },
+        "model": "blog.category",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "name": "Resilience Stories",
+            "name_es": "Historias de Resiliencia"
+        },
+        "model": "blog.category",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "body": "In today's fast-paced world, juggling the demands of work, personal commitments, and maintaining meaningful family connections can be a formidable challenge. As we navigate through the complexities of life, the importance of strong family ties cannot be overstated. The dynamics within a family significantly impact the well-being of its individual members, influencing their mental and emotional states.\r\n\r\nUnderstanding the vital role that family connections play in our lives, **\"At Home Psychology\"** extends its support to the realm of family ties through its innovative online psychology services. In this article, we explore the ways in which online psychology can contribute to the enhancement and nurturing of family bonds.\r\n\r\n## **1. Accessibility and Convenience:**\r\n\r\nOne of the primary obstacles to seeking psychological support for family-related issues is the constraint of time and location. **\"At Home Psychology\"** breaks down these barriers by offering online counseling services. This accessibility ensures that families can access professional support without the need to travel, allowing for greater flexibility in scheduling sessions to accommodate various family members.\r\n\r\n## **2. Individual and Collective Well-being:**\r\n\r\nFamily dynamics are intricate, and conflicts or challenges affecting one member often have a ripple effect on the entire family. Online psychology provides an avenue for individual family members to address personal issues while also fostering a collective understanding of shared challenges. Through virtual sessions, families can work together to improve communication, resolve conflicts, and strengthen their overall well-being.\r\n\r\n## **3. Tailored Approaches to Family Issues:**\r\n\r\n**\"At Home Psychology\"** recognizes that each family is unique, with its own set of dynamics and challenges. The platform's psychologists employ personalized approaches to address the specific needs of each family. Whether it's navigating through generational differences, managing sibling rivalries, or coping with major life transitions, the tailored strategies ensure that families receive targeted and effective support.\r\n\r\n## **4. Building Resilience:**\r\n\r\nIn the face of life's uncertainties, family resilience becomes a crucial factor in navigating challenges. Online psychology sessions offer a platform for families to develop coping strategies, enhance problem-solving skills, and fortify their ability to adapt to changing circumstances. Building resilience collectively equips families to weather storms and emerge stronger, fostering a sense of unity and connection.\r\n\r\n## **5. Strengthening Communication:**\r\n\r\nEffective communication lies at the heart of healthy family relationships. Online psychology facilitates open and constructive dialogues, providing families with the tools to express their thoughts, feelings, and concerns in a supportive environment. Improved communication fosters understanding, empathy, and the building of deeper connections within the family unit.\r\n\r\n*In conclusion,* **\"At Home Psychology\"** recognizes the intricate web of family ties and strives to empower families in nurturing these connections. By providing accessible, personalized, and effective online psychology services, the platform contributes to the well-being of individuals within the family and, consequently, strengthens the fabric of family bonds. In a world where time is a precious commodity, leveraging online psychology for family support ensures that families can thrive emotionally and mentally, fostering a harmonious and resilient foundation for generations to come.",
+            "body_es": "En el mundo acelerado de hoy, equilibrar las demandas del trabajo, los compromisos personales y mantener conexiones familiares significativas puede ser un desafío formidable. A medida que navegamos por las complejidades de la vida, no se puede subestimar la importancia de los fuertes lazos familiares. La dinámica dentro de una familia afecta significativamente el bienestar de sus miembros individuales, influyendo en sus estados mentales y emocionales.\r\n\r\nComprendiendo el papel vital que juegan las conexiones familiares en nuestras vidas, **\"At Home Psychology\"** extiende su apoyo al ámbito de los lazos familiares a través de sus innovadores servicios de psicología en línea. En este artículo, exploramos las formas en que la psicología en línea puede contribuir al mejoramiento y fomento de los lazos familiares.\r\n\r\n## **1. Accesibilidad y Conveniencia:**\r\n\r\nUno de los obstáculos principales para buscar apoyo psicológico para problemas relacionados con la familia es la limitación de tiempo y ubicación. **\"At Home Psychology\"** supera estas barreras al ofrecer servicios de asesoramiento en línea. Esta accesibilidad asegura que las familias puedan acceder a apoyo profesional sin la necesidad de viajar, permitiendo una mayor flexibilidad para programar sesiones que se ajusten a varios miembros de la familia.\r\n\r\n## **2. Bienestar Individual y Colectivo:**\r\n\r\nLas dinámicas familiares son intrincadas y los conflictos o desafíos que afectan a un miembro a menudo tienen un efecto dominó en toda la familia. La psicología en línea proporciona una vía para que los miembros individuales de la familia aborden problemas personales y al mismo tiempo fomenten una comprensión colectiva de los desafíos compartidos. A través de sesiones virtuales, las familias pueden trabajar juntas para mejorar la comunicación, resolver conflictos y fortalecer su bienestar general.\r\n\r\n## **3. Enfoques Personalizados para Problemas Familiares:**\r\n\r\n**\"At Home Psychology\"** reconoce que cada familia es única, con su propio conjunto de dinámicas y desafíos. Los psicólogos de la plataforma emplean enfoques personalizados para abordar las necesidades específicas de cada familia. Ya sea navegando por diferencias generacionales, manejando rivalidades entre hermanos o enfrentando importantes transiciones en la vida, las estrategias adaptadas aseguran que las familias reciban un apoyo dirigido y efectivo.\r\n\r\n## **4. Construyendo Resiliencia:**\r\n\r\nAnte las incertidumbres de la vida, la resiliencia familiar se convierte en un factor crucial para superar desafíos. Las sesiones de psicología en línea ofrecen una plataforma para que las familias desarrollen estrategias de afrontamiento, mejoren las habilidades para resolver problemas y fortalezcan su capacidad para adaptarse a circunstancias cambiantes. Construir resiliencia colectivamente capacita a las familias para enfrentar tormentas y salir más fuertes, fomentando un sentido de unidad y conexión.\r\n\r\n## **5. Fortaleciendo la Comunicación:**\r\n\r\nLa comunicación efectiva está en el corazón de las relaciones familiares saludables. La psicología en línea facilita diálogos abiertos y constructivos, proporcionando a las familias las herramientas para expresar sus pensamientos, sentimientos y preocupaciones en un entorno de apoyo. Una comunicación mejorada fomenta la comprensión, la empatía y la construcción de conexiones más profundas dentro de la unidad familiar.\r\n\r\n*En conclusión,* **\"At Home Psychology\"** reconoce la intrincada red de lazos familiares y se esfuerza por capacitar a las familias en el fomento de estas conexiones. Al proporcionar servicios de psicología en línea accesibles, personalizados y efectivos, la plataforma contribuye al bienestar de los individuos dentro de la familia y, en consecuencia, fortalece el tejido de los lazos familiares. En un mundo donde el tiempo es un bien preciado, aprovechar la psicología en línea para el apoyo familiar asegura que las familias puedan prosperar emocional y mentalmente, fomentando una base armoniosa y resistente para las generaciones futuras.",
+            "categories": [
+                1
+            ],
+            "created_on": "2024-03-07T08:43:13.211Z",
+            "image": "featured_image/2024/03/07/mindfulness.jpg",
+            "last_modified": "2024-03-07T08:43:13.212Z",
+            "title": "Nurturing Family Bonds: The Role of Online Psychology in Strengthening Family Ties",
+            "title_es": "Fomentando Lazos Familiares: El Rol de la Psicología en Línea en el Fortalecimiento de los Vínculos Familiares"
+        },
+        "model": "blog.post",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "body": "In the hustle and bustle of modern life, finding moments of peace and mindfulness can be a challenge. However, prioritizing mental well-being is essential for overall health. \"At Home Psychology\" introduces a pathway to mindfulness through its online psychology services, empowering individuals to embrace mindful moments. In this article, we delve into the significance of mindfulness and how online psychology can be a catalyst for cultivating a more present and centered life.\r\n\r\n## **1. Mindfulness in a Digital Age:**\r\n\r\nLiving in a digitally connected world, it's easy to feel overwhelmed and distracted. \"At Home Psychology\" acknowledges this reality and offers a unique approach to mindfulness that aligns with our modern lifestyles. Online psychology sessions provide individuals with the tools to navigate the digital noise and find moments of quiet contemplation.\r\n\r\n## **2. Integrating Mindfulness Practices:**\r\n\r\nThe platform integrates mindfulness practices into its sessions, encouraging individuals to explore techniques such as deep breathing, guided meditation, and mindful awareness. These practices aim to foster a heightened sense of presence, allowing individuals to engage more fully with their thoughts, emotions, and the world around them.\r\n\r\n## **3. Stress Reduction and Relaxation:**\r\n\r\nMindful moments have proven benefits for stress reduction and relaxation. \"At Home Psychology\" recognizes the connection between mindfulness and mental well-being, offering tailored strategies to help individuals manage stress and achieve a state of relaxation. The virtual sessions provide a safe space for individuals to explore and practice these techniques with the guidance of experienced psychologists.\r\n\r\n## **4. Enhancing Emotional Regulation:**\r\n\r\nMindfulness plays a crucial role in enhancing emotional regulation. Online psychology facilitates discussions and exercises that help individuals develop a mindful approach to their emotions. By cultivating awareness of emotional states, individuals can respond to challenges with greater resilience and clarity.\r\n\r\n## **5. Sustainable Mindfulness Practices:**\r\n\r\n\"At Home Psychology\" emphasizes the integration of sustainable mindfulness practices into daily life. Psychologists work with individuals to create personalized plans that fit seamlessly into their routines, ensuring that mindfulness becomes an ongoing, accessible tool for navigating life's complexities.\r\n\r\n*In Conclusion,* the incorporation of mindfulness into online psychology services at **\"At Home Psychology\"** highlights a commitment to holistic well-being. By embracing mindful moments, individuals can foster a greater sense of presence, reduce stress, and enhance their overall mental and emotional resilience. As we navigate the challenges of the digital age, the power of mindfulness, supported by online psychology, becomes an invaluable resource for cultivating a more balanced and centered life.",
+            "body_es": "En la agitación de la vida moderna, encontrar momentos de paz y atención plena puede ser un desafío. Sin embargo, priorizar el bienestar mental es esencial para la salud general. \"At Home Psychology\" presenta un camino hacia la atención plena a través de sus servicios de psicología en línea, capacitando a individuos para abrazar momentos conscientes. En este artículo, exploramos la importancia de la atención plena y cómo la psicología en línea puede ser un catalizador para cultivar una vida más presente y centrada.\r\n\r\n## **1. Atención Plena en la Era Digital:**\r\n\r\nViviendo en un mundo digitalmente conectado, es fácil sentirse abrumado y distraído. \"At Home Psychology\" reconoce esta realidad y ofrece un enfoque único para la atención plena que se alinea con nuestro estilo de vida moderno. Las sesiones de psicología en línea proporcionan a individuos las herramientas para navegar por el ruido digital y encontrar momentos de contemplación tranquila.\r\n\r\n## **2. Integración de Prácticas de Atención Plena:**\r\n\r\nLa plataforma integra prácticas de atención plena en sus sesiones, alentando a los individuos a explorar técnicas como la respiración profunda, la meditación guiada y la conciencia plena. Estas prácticas buscan fomentar un sentido elevado de presencia, permitiendo que los individuos se involucren más plenamente con sus pensamientos, emociones y el mundo que los rodea.\r\n\r\n## **3. Reducción del Estrés y Relajación:**\r\n\r\nLos momentos conscientes tienen beneficios probados para la reducción del estrés y la relajación. \"At Home Psychology\" reconoce la conexión entre la atención plena y el bienestar mental, ofreciendo estrategias adaptadas para ayudar a los individuos a manejar el estrés y lograr un estado de relajación. Las sesiones virtuales proporcionan un espacio seguro para que los individuos exploren y practiquen estas técnicas con la guía de psicólogos experimentados.\r\n\r\n## **4. Mejora de la Regulación Emocional:**\r\n\r\nLa atención plena juega un papel crucial en mejorar la regulación emocional. La psicología en línea facilita discusiones y ejercicios que ayudan a los individuos a desarrollar un enfoque consciente hacia sus emociones. Al cultivar la conciencia de los estados emocionales, los individuos pueden responder a los desafíos con mayor resistencia y claridad.\r\n\r\n## **5. Prácticas Sostenibles de Atención Plena:**\r\n\r\n\"At Home Psychology\" enfatiza la integración de prácticas sostenibles de atención plena en la vida diaria. Los psicólogos trabajan con individuos para crear planes personalizados que se integren fácilmente en sus rutinas, asegurando que la atención plena se convierta en una herramienta continua y accesible para navegar por las complejidades de la vida.\r\n\r\n*En conclusión,* la incorporación de la atención plena en los servicios de psicología en línea en **\"At Home Psychology\"** destaca un compromiso con el bienestar holístico. Al abrazar momentos conscientes, los individuos pueden fomentar un mayor sentido de presencia, reducir el estrés y mejorar su resistencia mental y emocional en general. Mientras navegamos por los desafíos de la era digital, el poder de la atención plena, respaldado por la psicología en línea, se convierte en un recurso invaluable para cultivar una vida más equilibrada y centrada.",
+            "categories": [
+                2
+            ],
+            "created_on": "2024-03-07T08:47:59.133Z",
+            "image": "featured_image/2024/03/07/vegetables-752153_640.jpg",
+            "last_modified": "2024-03-07T08:47:59.133Z",
+            "title": "Embracing Mindful Moments: The Power of Online Psychology in Cultivating Presence",
+            "title_es": "Abrazando Momentos Conscientes: El Poder de la Psicología en Línea en el Cultivo de la Presencia"
+        },
+        "model": "blog.post",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "body": "In today's fast-paced world, juggling the demands of work, personal commitments, and maintaining meaningful family connections can be a formidable challenge. As we navigate through the complexities of life, the importance of strong family ties cannot be overstated. The dynamics within a family significantly impact the well-being of its individual members, influencing their mental and emotional states.\r\n\r\nUnderstanding the vital role that family connections play in our lives, **\"At Home Psychology\"** extends its support to the realm of family ties through its innovative online psychology services. In this article, we explore the ways in which online psychology can contribute to the enhancement and nurturing of family bonds.\r\n\r\n## **1. Accessibility and Convenience:**\r\n\r\nOne of the primary obstacles to seeking psychological support for family-related issues is the constraint of time and location. **\"At Home Psychology\"** breaks down these barriers by offering online counseling services. This accessibility ensures that families can access professional support without the need to travel, allowing for greater flexibility in scheduling sessions to accommodate various family members.\r\n\r\n## **2. Individual and Collective Well-being:**\r\n\r\nFamily dynamics are intricate, and conflicts or challenges affecting one member often have a ripple effect on the entire family. Online psychology provides an avenue for individual family members to address personal issues while also fostering a collective understanding of shared challenges. Through virtual sessions, families can work together to improve communication, resolve conflicts, and strengthen their overall well-being.\r\n\r\n## **3. Tailored Approaches to Family Issues:**\r\n\r\n**\"At Home Psychology\"** recognizes that each family is unique, with its own set of dynamics and challenges. The platform's psychologists employ personalized approaches to address the specific needs of each family. Whether it's navigating through generational differences, managing sibling rivalries, or coping with major life transitions, the tailored strategies ensure that families receive targeted and effective support.\r\n\r\n## **4. Building Resilience:**\r\n\r\nIn the face of life's uncertainties, family resilience becomes a crucial factor in navigating challenges. Online psychology sessions offer a platform for families to develop coping strategies, enhance problem-solving skills, and fortify their ability to adapt to changing circumstances. Building resilience collectively equips families to weather storms and emerge stronger, fostering a sense of unity and connection.\r\n\r\n## **5. Strengthening Communication:**\r\n\r\nEffective communication lies at the heart of healthy family relationships. Online psychology facilitates open and constructive dialogues, providing families with the tools to express their thoughts, feelings, and concerns in a supportive environment. Improved communication fosters understanding, empathy, and the building of deeper connections within the family unit.\r\n\r\n*In conclusion,* **\"At Home Psychology\"** recognizes the intricate web of family ties and strives to empower families in nurturing these connections. By providing accessible, personalized, and effective online psychology services, the platform contributes to the well-being of individuals within the family and, consequently, strengthens the fabric of family bonds. In a world where time is a precious commodity, leveraging online psychology for family support ensures that families can thrive emotionally and mentally, fostering a harmonious and resilient foundation for generations to come.",
+            "body_es": "En el mundo acelerado de hoy, equilibrar las demandas del trabajo, los compromisos personales y mantener conexiones familiares significativas puede ser un desafío formidable. A medida que navegamos por las complejidades de la vida, no se puede subestimar la importancia de los fuertes lazos familiares. La dinámica dentro de una familia afecta significativamente el bienestar de sus miembros individuales, influyendo en sus estados mentales y emocionales.\r\n\r\nComprendiendo el papel vital que juegan las conexiones familiares en nuestras vidas, **\"At Home Psychology\"** extiende su apoyo al ámbito de los lazos familiares a través de sus innovadores servicios de psicología en línea. En este artículo, exploramos las formas en que la psicología en línea puede contribuir al mejoramiento y fomento de los lazos familiares.\r\n\r\n## **1. Accesibilidad y Conveniencia:**\r\n\r\nUno de los obstáculos principales para buscar apoyo psicológico para problemas relacionados con la familia es la limitación de tiempo y ubicación. **\"At Home Psychology\"** supera estas barreras al ofrecer servicios de asesoramiento en línea. Esta accesibilidad asegura que las familias puedan acceder a apoyo profesional sin la necesidad de viajar, permitiendo una mayor flexibilidad para programar sesiones que se ajusten a varios miembros de la familia.\r\n\r\n## **2. Bienestar Individual y Colectivo:**\r\n\r\nLas dinámicas familiares son intrincadas y los conflictos o desafíos que afectan a un miembro a menudo tienen un efecto dominó en toda la familia. La psicología en línea proporciona una vía para que los miembros individuales de la familia aborden problemas personales y al mismo tiempo fomenten una comprensión colectiva de los desafíos compartidos. A través de sesiones virtuales, las familias pueden trabajar juntas para mejorar la comunicación, resolver conflictos y fortalecer su bienestar general.\r\n\r\n## **3. Enfoques Personalizados para Problemas Familiares:**\r\n\r\n**\"At Home Psychology\"** reconoce que cada familia es única, con su propio conjunto de dinámicas y desafíos. Los psicólogos de la plataforma emplean enfoques personalizados para abordar las necesidades específicas de cada familia. Ya sea navegando por diferencias generacionales, manejando rivalidades entre hermanos o enfrentando importantes transiciones en la vida, las estrategias adaptadas aseguran que las familias reciban un apoyo dirigido y efectivo.\r\n\r\n## **4. Construyendo Resiliencia:**\r\n\r\nAnte las incertidumbres de la vida, la resiliencia familiar se convierte en un factor crucial para superar desafíos. Las sesiones de psicología en línea ofrecen una plataforma para que las familias desarrollen estrategias de afrontamiento, mejoren las habilidades para resolver problemas y fortalezcan su capacidad para adaptarse a circunstancias cambiantes. Construir resiliencia colectivamente capacita a las familias para enfrentar tormentas y salir más fuertes, fomentando un sentido de unidad y conexión.\r\n\r\n## **5. Fortaleciendo la Comunicación:**\r\n\r\nLa comunicación efectiva está en el corazón de las relaciones familiares saludables. La psicología en línea facilita diálogos abiertos y constructivos, proporcionando a las familias las herramientas para expresar sus pensamientos, sentimientos y preocupaciones en un entorno de apoyo. Una comunicación mejorada fomenta la comprensión, la empatía y la construcción de conexiones más profundas dentro de la unidad familiar.\r\n\r\n*En conclusión,* **\"At Home Psychology\"** reconoce la intrincada red de lazos familiares y se esfuerza por capacitar a las familias en el fomento de estas conexiones. Al proporcionar servicios de psicología en línea accesibles, personalizados y efectivos, la plataforma contribuye al bienestar de los individuos dentro de la familia y, en consecuencia, fortalece el tejido de los lazos familiares. En un mundo donde el tiempo es un bien preciado, aprovechar la psicología en línea para el apoyo familiar asegura que las familias puedan prosperar emocional y mentalmente, fomentando una base armoniosa y resistente para las generaciones futuras.",
+            "categories": [
+                3
+            ],
+            "created_on": "2024-03-07T17:59:49.802Z",
+            "image": "featured_image/2024/03/07/brain.png",
+            "last_modified": "2024-03-07T17:59:49.802Z",
+            "title": "Nurturing Family Bonds: The Role of Online Psychology in Strengthening Family Ties",
+            "title_es": "Fomentando Lazos Familiares: El Rol de la Psicología en Línea en el Fortalecimiento de los Vínculos Familiares"
+        },
+        "model": "blog.post",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "author": "Annonymous",
+            "body": "What a nice article",
+            "created_on": "2024-03-07T08:55:03.328Z",
+            "post": 2
+        },
+        "model": "blog.comment",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2024-03-07T08:25:02.774Z",
+            "change_message": "[{\"added\": {}}]",
+            "content_type": 6,
+            "object_id": "1",
+            "object_repr": "Family Ties",
+            "user": 1
+        },
+        "model": "admin.logentry",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2024-03-07T08:25:18.065Z",
+            "change_message": "[{\"added\": {}}]",
+            "content_type": 6,
+            "object_id": "2",
+            "object_repr": "Mindful Moments",
+            "user": 1
+        },
+        "model": "admin.logentry",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2024-03-07T08:25:35.029Z",
+            "change_message": "[{\"added\": {}}]",
+            "content_type": 6,
+            "object_id": "3",
+            "object_repr": "Resilience Stories",
+            "user": 1
+        },
+        "model": "admin.logentry",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2024-03-07T08:26:27.977Z",
+            "change_message": "[{\"added\": {}}]",
+            "content_type": 1,
+            "object_id": "2",
+            "object_repr": "Dariusz",
+            "user": 1
+        },
+        "model": "admin.logentry",
+        "pk": 4
+    },
+    {
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2024-03-07T08:27:08.164Z",
+            "change_message": "[{\"added\": {}}]",
+            "content_type": 1,
+            "object_id": "3",
+            "object_repr": "Yanira",
+            "user": 1
+        },
+        "model": "admin.logentry",
+        "pk": 5
+    },
+    {
+        "fields": {
+            "action_flag": 2,
+            "action_time": "2024-03-07T08:27:32.750Z",
+            "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]",
+            "content_type": 1,
+            "object_id": "1",
+            "object_repr": "Szczepan",
+            "user": 1
+        },
+        "model": "admin.logentry",
+        "pk": 6
+    },
+    {
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2024-03-07T08:32:16.576Z",
+            "change_message": "[{\"added\": {}}]",
+            "content_type": 19,
+            "object_id": "3",
+            "object_repr": "darekkk@wp.pl",
+            "user": 1
+        },
+        "model": "admin.logentry",
+        "pk": 7
+    },
+    {
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2024-03-07T08:32:36.142Z",
+            "change_message": "[{\"added\": {}}]",
+            "content_type": 19,
+            "object_id": "4",
+            "object_repr": "yanisoto@gmail.com",
+            "user": 1
+        },
+        "model": "admin.logentry",
+        "pk": 8
+    },
+    {
+        "fields": {
+            "action_flag": 2,
+            "action_time": "2024-03-07T08:33:18.515Z",
+            "change_message": "[{\"changed\": {\"fields\": [\"Primary\"]}}]",
+            "content_type": 19,
+            "object_id": "1",
+            "object_repr": "szczepan.zielinski05@gmail.com",
+            "user": 1
+        },
+        "model": "admin.logentry",
+        "pk": 9
+    },
+    {
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2024-03-07T08:33:53.018Z",
+            "change_message": "[{\"added\": {}}]",
+            "content_type": 3,
+            "object_id": "1",
+            "object_repr": "Stefan | day: 2024-03-07 | time: 9 AM",
+            "user": 1
+        },
+        "model": "admin.logentry",
+        "pk": 10
+    },
+    {
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2024-03-07T08:34:04.623Z",
+            "change_message": "[{\"added\": {}}]",
+            "content_type": 3,
+            "object_id": "2",
+            "object_repr": "Yanira | day: 2024-03-07 | time: 11 AM",
+            "user": 1
+        },
+        "model": "admin.logentry",
+        "pk": 11
+    },
+    {
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2024-03-07T08:34:11.518Z",
+            "change_message": "[{\"added\": {}}]",
+            "content_type": 3,
+            "object_id": "3",
+            "object_repr": "Szczepan | day: 2024-03-07 | time: 3 PM",
+            "user": 1
+        },
+        "model": "admin.logentry",
+        "pk": 12
+    },
+    {
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2024-03-07T08:34:29.885Z",
+            "change_message": "[{\"added\": {}}]",
+            "content_type": 3,
+            "object_id": "4",
+            "object_repr": "Yanira | day: 2024-03-08 | time: 8 AM",
+            "user": 1
+        },
+        "model": "admin.logentry",
+        "pk": 13
+    },
+    {
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2024-03-07T08:36:34.183Z",
+            "change_message": "[{\"added\": {}}]",
+            "content_type": 2,
+            "object_id": "1",
+            "object_repr": "zszczep - 5",
+            "user": 1
+        },
+        "model": "admin.logentry",
+        "pk": 14
+    },
+    {
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2024-03-07T08:36:47.661Z",
+            "change_message": "[{\"added\": {}}]",
+            "content_type": 2,
+            "object_id": "2",
+            "object_repr": "yanisoto - 5",
+            "user": 1
+        },
+        "model": "admin.logentry",
+        "pk": 15
+    },
+    {
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2024-03-07T08:37:07.156Z",
+            "change_message": "[{\"added\": {}}]",
+            "content_type": 2,
+            "object_id": "3",
+            "object_repr": "darekkk - 5",
+            "user": 1
+        },
+        "model": "admin.logentry",
+        "pk": 16
+    },
+    {
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2024-03-07T08:37:31.833Z",
+            "change_message": "[{\"added\": {}}]",
+            "content_type": 2,
+            "object_id": "4",
+            "object_repr": "szczepanzielinski - 4",
+            "user": 1
+        },
+        "model": "admin.logentry",
+        "pk": 17
+    },
+    {
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2024-03-07T08:43:13.226Z",
+            "change_message": "[{\"added\": {}}]",
+            "content_type": 7,
+            "object_id": "1",
+            "object_repr": "Nurturing Family Bonds: The Role of Online Psychology in Strengthening Family Ties",
+            "user": 1
+        },
+        "model": "admin.logentry",
+        "pk": 18
+    },
+    {
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2024-03-07T08:47:59.151Z",
+            "change_message": "[{\"added\": {}}]",
+            "content_type": 7,
+            "object_id": "2",
+            "object_repr": "Embracing Mindful Moments: The Power of Online Psychology in Cultivating Presence",
+            "user": 1
+        },
+        "model": "admin.logentry",
+        "pk": 19
+    },
+    {
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2024-03-07T08:55:40.596Z",
+            "change_message": "[{\"added\": {}}]",
+            "content_type": 3,
+            "object_id": "5",
+            "object_repr": "Yanira | day: 2024-03-10 | time: 8 AM",
+            "user": 1
+        },
+        "model": "admin.logentry",
+        "pk": 20
+    },
+    {
+        "fields": {
+            "action_flag": 3,
+            "action_time": "2024-03-07T17:19:16.886Z",
+            "change_message": "",
+            "content_type": 1,
+            "object_id": "4",
+            "object_repr": "Stefan",
+            "user": 1
+        },
+        "model": "admin.logentry",
+        "pk": 21
+    },
+    {
+        "fields": {
+            "action_flag": 2,
+            "action_time": "2024-03-07T17:26:41.193Z",
+            "change_message": "[{\"changed\": {\"fields\": [\"Superuser status\", \"Staff status\"]}}]",
+            "content_type": 1,
+            "object_id": "5",
+            "object_repr": "Stefan",
+            "user": 1
+        },
+        "model": "admin.logentry",
+        "pk": 22
+    },
+    {
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2024-03-07T17:57:45.298Z",
+            "change_message": "[{\"added\": {}}]",
+            "content_type": 4,
+            "object_id": "1",
+            "object_repr": "test file",
+            "user": 1
+        },
+        "model": "admin.logentry",
+        "pk": 27
+    },
+    {
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2024-03-07T17:59:49.817Z",
+            "change_message": "[{\"added\": {}}]",
+            "content_type": 7,
+            "object_id": "3",
+            "object_repr": "Nurturing Family Bonds: The Role of Online Psychology in Strengthening Family Ties",
+            "user": 1
+        },
+        "model": "admin.logentry",
+        "pk": 28
+    },
+    {
+        "fields": {
+            "action_flag": 1,
+            "action_time": "2024-03-07T18:07:18.005Z",
+            "change_message": "[{\"added\": {}}]",
+            "content_type": 2,
+            "object_id": "5",
+            "object_repr": "testuser - 3",
+            "user": 1
+        },
+        "model": "admin.logentry",
+        "pk": 29
+    },
+    {
+        "fields": {
+            "codename": "add_customuser",
+            "content_type": 1,
+            "name": "Can add user"
+        },
+        "model": "auth.permission",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "codename": "change_customuser",
+            "content_type": 1,
+            "name": "Can change user"
+        },
+        "model": "auth.permission",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "codename": "delete_customuser",
+            "content_type": 1,
+            "name": "Can delete user"
+        },
+        "model": "auth.permission",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "codename": "view_customuser",
+            "content_type": 1,
+            "name": "Can view user"
+        },
+        "model": "auth.permission",
+        "pk": 4
+    },
+    {
+        "fields": {
+            "codename": "add_review",
+            "content_type": 2,
+            "name": "Can add review"
+        },
+        "model": "auth.permission",
+        "pk": 5
+    },
+    {
+        "fields": {
+            "codename": "change_review",
+            "content_type": 2,
+            "name": "Can change review"
+        },
+        "model": "auth.permission",
+        "pk": 6
+    },
+    {
+        "fields": {
+            "codename": "delete_review",
+            "content_type": 2,
+            "name": "Can delete review"
+        },
+        "model": "auth.permission",
+        "pk": 7
+    },
+    {
+        "fields": {
+            "codename": "view_review",
+            "content_type": 2,
+            "name": "Can view review"
+        },
+        "model": "auth.permission",
+        "pk": 8
+    },
+    {
+        "fields": {
+            "codename": "add_appointment",
+            "content_type": 3,
+            "name": "Can add appointment"
+        },
+        "model": "auth.permission",
+        "pk": 9
+    },
+    {
+        "fields": {
+            "codename": "change_appointment",
+            "content_type": 3,
+            "name": "Can change appointment"
+        },
+        "model": "auth.permission",
+        "pk": 10
+    },
+    {
+        "fields": {
+            "codename": "delete_appointment",
+            "content_type": 3,
+            "name": "Can delete appointment"
+        },
+        "model": "auth.permission",
+        "pk": 11
+    },
+    {
+        "fields": {
+            "codename": "view_appointment",
+            "content_type": 3,
+            "name": "Can view appointment"
+        },
+        "model": "auth.permission",
+        "pk": 12
+    },
+    {
+        "fields": {
+            "codename": "add_pdffile",
+            "content_type": 4,
+            "name": "Can add pdf file"
+        },
+        "model": "auth.permission",
+        "pk": 13
+    },
+    {
+        "fields": {
+            "codename": "change_pdffile",
+            "content_type": 4,
+            "name": "Can change pdf file"
+        },
+        "model": "auth.permission",
+        "pk": 14
+    },
+    {
+        "fields": {
+            "codename": "delete_pdffile",
+            "content_type": 4,
+            "name": "Can delete pdf file"
+        },
+        "model": "auth.permission",
+        "pk": 15
+    },
+    {
+        "fields": {
+            "codename": "view_pdffile",
+            "content_type": 4,
+            "name": "Can view pdf file"
+        },
+        "model": "auth.permission",
+        "pk": 16
+    },
+    {
+        "fields": {
+            "codename": "add_message",
+            "content_type": 5,
+            "name": "Can add message"
+        },
+        "model": "auth.permission",
+        "pk": 17
+    },
+    {
+        "fields": {
+            "codename": "change_message",
+            "content_type": 5,
+            "name": "Can change message"
+        },
+        "model": "auth.permission",
+        "pk": 18
+    },
+    {
+        "fields": {
+            "codename": "delete_message",
+            "content_type": 5,
+            "name": "Can delete message"
+        },
+        "model": "auth.permission",
+        "pk": 19
+    },
+    {
+        "fields": {
+            "codename": "view_message",
+            "content_type": 5,
+            "name": "Can view message"
+        },
+        "model": "auth.permission",
+        "pk": 20
+    },
+    {
+        "fields": {
+            "codename": "add_category",
+            "content_type": 6,
+            "name": "Can add category"
+        },
+        "model": "auth.permission",
+        "pk": 21
+    },
+    {
+        "fields": {
+            "codename": "change_category",
+            "content_type": 6,
+            "name": "Can change category"
+        },
+        "model": "auth.permission",
+        "pk": 22
+    },
+    {
+        "fields": {
+            "codename": "delete_category",
+            "content_type": 6,
+            "name": "Can delete category"
+        },
+        "model": "auth.permission",
+        "pk": 23
+    },
+    {
+        "fields": {
+            "codename": "view_category",
+            "content_type": 6,
+            "name": "Can view category"
+        },
+        "model": "auth.permission",
+        "pk": 24
+    },
+    {
+        "fields": {
+            "codename": "add_post",
+            "content_type": 7,
+            "name": "Can add Post"
+        },
+        "model": "auth.permission",
+        "pk": 25
+    },
+    {
+        "fields": {
+            "codename": "change_post",
+            "content_type": 7,
+            "name": "Can change Post"
+        },
+        "model": "auth.permission",
+        "pk": 26
+    },
+    {
+        "fields": {
+            "codename": "delete_post",
+            "content_type": 7,
+            "name": "Can delete Post"
+        },
+        "model": "auth.permission",
+        "pk": 27
+    },
+    {
+        "fields": {
+            "codename": "view_post",
+            "content_type": 7,
+            "name": "Can view Post"
+        },
+        "model": "auth.permission",
+        "pk": 28
+    },
+    {
+        "fields": {
+            "codename": "add_comment",
+            "content_type": 8,
+            "name": "Can add comment"
+        },
+        "model": "auth.permission",
+        "pk": 29
+    },
+    {
+        "fields": {
+            "codename": "change_comment",
+            "content_type": 8,
+            "name": "Can change comment"
+        },
+        "model": "auth.permission",
+        "pk": 30
+    },
+    {
+        "fields": {
+            "codename": "delete_comment",
+            "content_type": 8,
+            "name": "Can delete comment"
+        },
+        "model": "auth.permission",
+        "pk": 31
+    },
+    {
+        "fields": {
+            "codename": "view_comment",
+            "content_type": 8,
+            "name": "Can view comment"
+        },
+        "model": "auth.permission",
+        "pk": 32
+    },
+    {
+        "fields": {
+            "codename": "add_logentry",
+            "content_type": 9,
+            "name": "Can add log entry"
+        },
+        "model": "auth.permission",
+        "pk": 33
+    },
+    {
+        "fields": {
+            "codename": "change_logentry",
+            "content_type": 9,
+            "name": "Can change log entry"
+        },
+        "model": "auth.permission",
+        "pk": 34
+    },
+    {
+        "fields": {
+            "codename": "delete_logentry",
+            "content_type": 9,
+            "name": "Can delete log entry"
+        },
+        "model": "auth.permission",
+        "pk": 35
+    },
+    {
+        "fields": {
+            "codename": "view_logentry",
+            "content_type": 9,
+            "name": "Can view log entry"
+        },
+        "model": "auth.permission",
+        "pk": 36
+    },
+    {
+        "fields": {
+            "codename": "add_permission",
+            "content_type": 10,
+            "name": "Can add permission"
+        },
+        "model": "auth.permission",
+        "pk": 37
+    },
+    {
+        "fields": {
+            "codename": "change_permission",
+            "content_type": 10,
+            "name": "Can change permission"
+        },
+        "model": "auth.permission",
+        "pk": 38
+    },
+    {
+        "fields": {
+            "codename": "delete_permission",
+            "content_type": 10,
+            "name": "Can delete permission"
+        },
+        "model": "auth.permission",
+        "pk": 39
+    },
+    {
+        "fields": {
+            "codename": "view_permission",
+            "content_type": 10,
+            "name": "Can view permission"
+        },
+        "model": "auth.permission",
+        "pk": 40
+    },
+    {
+        "fields": {
+            "codename": "add_group",
+            "content_type": 11,
+            "name": "Can add group"
+        },
+        "model": "auth.permission",
+        "pk": 41
+    },
+    {
+        "fields": {
+            "codename": "change_group",
+            "content_type": 11,
+            "name": "Can change group"
+        },
+        "model": "auth.permission",
+        "pk": 42
+    },
+    {
+        "fields": {
+            "codename": "delete_group",
+            "content_type": 11,
+            "name": "Can delete group"
+        },
+        "model": "auth.permission",
+        "pk": 43
+    },
+    {
+        "fields": {
+            "codename": "view_group",
+            "content_type": 11,
+            "name": "Can view group"
+        },
+        "model": "auth.permission",
+        "pk": 44
+    },
+    {
+        "fields": {
+            "codename": "add_contenttype",
+            "content_type": 12,
+            "name": "Can add content type"
+        },
+        "model": "auth.permission",
+        "pk": 45
+    },
+    {
+        "fields": {
+            "codename": "change_contenttype",
+            "content_type": 12,
+            "name": "Can change content type"
+        },
+        "model": "auth.permission",
+        "pk": 46
+    },
+    {
+        "fields": {
+            "codename": "delete_contenttype",
+            "content_type": 12,
+            "name": "Can delete content type"
+        },
+        "model": "auth.permission",
+        "pk": 47
+    },
+    {
+        "fields": {
+            "codename": "view_contenttype",
+            "content_type": 12,
+            "name": "Can view content type"
+        },
+        "model": "auth.permission",
+        "pk": 48
+    },
+    {
+        "fields": {
+            "codename": "add_session",
+            "content_type": 13,
+            "name": "Can add session"
+        },
+        "model": "auth.permission",
+        "pk": 49
+    },
+    {
+        "fields": {
+            "codename": "change_session",
+            "content_type": 13,
+            "name": "Can change session"
+        },
+        "model": "auth.permission",
+        "pk": 50
+    },
+    {
+        "fields": {
+            "codename": "delete_session",
+            "content_type": 13,
+            "name": "Can delete session"
+        },
+        "model": "auth.permission",
+        "pk": 51
+    },
+    {
+        "fields": {
+            "codename": "view_session",
+            "content_type": 13,
+            "name": "Can view session"
+        },
+        "model": "auth.permission",
+        "pk": 52
+    },
+    {
+        "fields": {
+            "codename": "add_association",
+            "content_type": 14,
+            "name": "Can add association"
+        },
+        "model": "auth.permission",
+        "pk": 53
+    },
+    {
+        "fields": {
+            "codename": "change_association",
+            "content_type": 14,
+            "name": "Can change association"
+        },
+        "model": "auth.permission",
+        "pk": 54
+    },
+    {
+        "fields": {
+            "codename": "delete_association",
+            "content_type": 14,
+            "name": "Can delete association"
+        },
+        "model": "auth.permission",
+        "pk": 55
+    },
+    {
+        "fields": {
+            "codename": "view_association",
+            "content_type": 14,
+            "name": "Can view association"
+        },
+        "model": "auth.permission",
+        "pk": 56
+    },
+    {
+        "fields": {
+            "codename": "add_code",
+            "content_type": 15,
+            "name": "Can add code"
+        },
+        "model": "auth.permission",
+        "pk": 57
+    },
+    {
+        "fields": {
+            "codename": "change_code",
+            "content_type": 15,
+            "name": "Can change code"
+        },
+        "model": "auth.permission",
+        "pk": 58
+    },
+    {
+        "fields": {
+            "codename": "delete_code",
+            "content_type": 15,
+            "name": "Can delete code"
+        },
+        "model": "auth.permission",
+        "pk": 59
+    },
+    {
+        "fields": {
+            "codename": "view_code",
+            "content_type": 15,
+            "name": "Can view code"
+        },
+        "model": "auth.permission",
+        "pk": 60
+    },
+    {
+        "fields": {
+            "codename": "add_nonce",
+            "content_type": 16,
+            "name": "Can add nonce"
+        },
+        "model": "auth.permission",
+        "pk": 61
+    },
+    {
+        "fields": {
+            "codename": "change_nonce",
+            "content_type": 16,
+            "name": "Can change nonce"
+        },
+        "model": "auth.permission",
+        "pk": 62
+    },
+    {
+        "fields": {
+            "codename": "delete_nonce",
+            "content_type": 16,
+            "name": "Can delete nonce"
+        },
+        "model": "auth.permission",
+        "pk": 63
+    },
+    {
+        "fields": {
+            "codename": "view_nonce",
+            "content_type": 16,
+            "name": "Can view nonce"
+        },
+        "model": "auth.permission",
+        "pk": 64
+    },
+    {
+        "fields": {
+            "codename": "add_usersocialauth",
+            "content_type": 17,
+            "name": "Can add user social auth"
+        },
+        "model": "auth.permission",
+        "pk": 65
+    },
+    {
+        "fields": {
+            "codename": "change_usersocialauth",
+            "content_type": 17,
+            "name": "Can change user social auth"
+        },
+        "model": "auth.permission",
+        "pk": 66
+    },
+    {
+        "fields": {
+            "codename": "delete_usersocialauth",
+            "content_type": 17,
+            "name": "Can delete user social auth"
+        },
+        "model": "auth.permission",
+        "pk": 67
+    },
+    {
+        "fields": {
+            "codename": "view_usersocialauth",
+            "content_type": 17,
+            "name": "Can view user social auth"
+        },
+        "model": "auth.permission",
+        "pk": 68
+    },
+    {
+        "fields": {
+            "codename": "add_partial",
+            "content_type": 18,
+            "name": "Can add partial"
+        },
+        "model": "auth.permission",
+        "pk": 69
+    },
+    {
+        "fields": {
+            "codename": "change_partial",
+            "content_type": 18,
+            "name": "Can change partial"
+        },
+        "model": "auth.permission",
+        "pk": 70
+    },
+    {
+        "fields": {
+            "codename": "delete_partial",
+            "content_type": 18,
+            "name": "Can delete partial"
+        },
+        "model": "auth.permission",
+        "pk": 71
+    },
+    {
+        "fields": {
+            "codename": "view_partial",
+            "content_type": 18,
+            "name": "Can view partial"
+        },
+        "model": "auth.permission",
+        "pk": 72
+    },
+    {
+        "fields": {
+            "codename": "add_emailaddress",
+            "content_type": 19,
+            "name": "Can add email address"
+        },
+        "model": "auth.permission",
+        "pk": 73
+    },
+    {
+        "fields": {
+            "codename": "change_emailaddress",
+            "content_type": 19,
+            "name": "Can change email address"
+        },
+        "model": "auth.permission",
+        "pk": 74
+    },
+    {
+        "fields": {
+            "codename": "delete_emailaddress",
+            "content_type": 19,
+            "name": "Can delete email address"
+        },
+        "model": "auth.permission",
+        "pk": 75
+    },
+    {
+        "fields": {
+            "codename": "view_emailaddress",
+            "content_type": 19,
+            "name": "Can view email address"
+        },
+        "model": "auth.permission",
+        "pk": 76
+    },
+    {
+        "fields": {
+            "codename": "add_emailconfirmation",
+            "content_type": 20,
+            "name": "Can add email confirmation"
+        },
+        "model": "auth.permission",
+        "pk": 77
+    },
+    {
+        "fields": {
+            "codename": "change_emailconfirmation",
+            "content_type": 20,
+            "name": "Can change email confirmation"
+        },
+        "model": "auth.permission",
+        "pk": 78
+    },
+    {
+        "fields": {
+            "codename": "delete_emailconfirmation",
+            "content_type": 20,
+            "name": "Can delete email confirmation"
+        },
+        "model": "auth.permission",
+        "pk": 79
+    },
+    {
+        "fields": {
+            "codename": "view_emailconfirmation",
+            "content_type": 20,
+            "name": "Can view email confirmation"
+        },
+        "model": "auth.permission",
+        "pk": 80
+    },
+    {
+        "fields": {
+            "app_label": "accounts",
+            "model": "customuser"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "app_label": "reviews",
+            "model": "review"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "app_label": "booking",
+            "model": "appointment"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "app_label": "home",
+            "model": "pdffile"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 4
+    },
+    {
+        "fields": {
+            "app_label": "contact",
+            "model": "message"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 5
+    },
+    {
+        "fields": {
+            "app_label": "blog",
+            "model": "category"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 6
+    },
+    {
+        "fields": {
+            "app_label": "blog",
+            "model": "post"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 7
+    },
+    {
+        "fields": {
+            "app_label": "blog",
+            "model": "comment"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 8
+    },
+    {
+        "fields": {
+            "app_label": "admin",
+            "model": "logentry"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 9
+    },
+    {
+        "fields": {
+            "app_label": "auth",
+            "model": "permission"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 10
+    },
+    {
+        "fields": {
+            "app_label": "auth",
+            "model": "group"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 11
+    },
+    {
+        "fields": {
+            "app_label": "contenttypes",
+            "model": "contenttype"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 12
+    },
+    {
+        "fields": {
+            "app_label": "sessions",
+            "model": "session"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 13
+    },
+    {
+        "fields": {
+            "app_label": "social_django",
+            "model": "association"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 14
+    },
+    {
+        "fields": {
+            "app_label": "social_django",
+            "model": "code"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 15
+    },
+    {
+        "fields": {
+            "app_label": "social_django",
+            "model": "nonce"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 16
+    },
+    {
+        "fields": {
+            "app_label": "social_django",
+            "model": "usersocialauth"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 17
+    },
+    {
+        "fields": {
+            "app_label": "social_django",
+            "model": "partial"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 18
+    },
+    {
+        "fields": {
+            "app_label": "account",
+            "model": "emailaddress"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 19
+    },
+    {
+        "fields": {
+            "app_label": "account",
+            "model": "emailconfirmation"
+        },
+        "model": "contenttypes.contenttype",
+        "pk": 20
+    },
+    {
+        "fields": {
+            "expire_date": "2024-03-21T08:30:58.976Z",
+            "session_data": ".eJxVjDsOwjAQBe_iGln-beylpOcM1trr4ABypDipEHeHSCmgfTPzXiLStta49bLEicVZaHH63RLlR2k74Du12yzz3NZlSnJX5EG7vM5cnpfD_Tuo1Ou3NuNA3o0YBiAuTmFCpuysz8lrUAkgawR26CyCT0ppFdCzCRbJsDXi_QHW_jbv:1ri99W:Sx4EWIY_-Dsd1YpvXbAv6nPle6N13GOur2wycxyUd_M"
+        },
+        "model": "sessions.session",
+        "pk": "kkxu6on8mvziexl0hpzhm6xt8p870s1n"
+    },
+    {
+        "fields": {
+            "expire_date": "2024-03-21T17:44:29.491Z",
+            "session_data": ".eJxVjDsOwjAQBe_iGln-beylpOcM1trr4ABypDipEHeHSCmgfTPzXiLStta49bLEicVZaHH63RLlR2k74Du12yzz3NZlSnJX5EG7vM5cnpfD_Tuo1Ou3NuNA3o0YBiAuTmFCpuysz8lrUAkgawR26CyCT0ppFdCzCRbJsDXi_QHW_jbv:1riHnB:iHixqIwzWGQXwdzzVByDmJ9vLcHXhYx1Is6FKY8lagA"
+        },
+        "model": "sessions.session",
+        "pk": "tpf2zhq77s7tewqng6j90i3h464hwww7"
+    },
+    {
+        "fields": {
+            "expire_date": "2024-03-21T18:04:09.257Z",
+            "session_data": ".eJxtUEluhDAQ_IvPCHnH5pj7vCCKkJee4ATsETZZNJq_xxCUTbm1qqqruuuKjHNpjWV4gSWcA_gBZhMm1Md1mpovds2woB516BsyaxkhluBMCSkOM5Qx-Yz6-yv6nKv-YnJ-TYvf1grqSYe1YlR3uhWaasx4gzbnaGao6gK57EG3hwbt_nvuEPwR_QOzxj1D3Aj_ZOJjal2KZQm23STtweb2lDxMd4f2l8Fo8li3JXaee0qkUU4YrhW1XJ8ZsUIppjknHUiGree40ooaLK0i3GMMpLPC0v8LqTX--VcKTKRg9YQMOW-FwdslLO-ox7cPfTGAog:1riI6D:0uh9AzDhWJ9u_aCdOIicXTVosO2FunGgI026MmKpWXs"
+        },
+        "model": "sessions.session",
+        "pk": "zoyvyppto73ve8t1j25wjioqcbi4zwt6"
+    },
+    {
+        "fields": {
+            "email": "szczepan.zielinski05@gmail.com",
+            "primary": true,
+            "user": 1,
+            "verified": true
+        },
+        "model": "account.emailaddress",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "email": "darekkk@wp.pl",
+            "primary": true,
+            "user": 2,
+            "verified": true
+        },
+        "model": "account.emailaddress",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "email": "yanisoto@gmail.com",
+            "primary": true,
+            "user": 3,
+            "verified": true
+        },
+        "model": "account.emailaddress",
+        "pk": 4
+    },
+    {
+        "fields": {
+            "email": "zszczep@wp.pl",
+            "primary": true,
+            "user": 7,
+            "verified": true
+        },
+        "model": "account.emailaddress",
+        "pk": 7
+    }
+]

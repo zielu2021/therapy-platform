@@ -1,0 +1,21 @@
+{% extends 'base1.html' %}
+{% load i18n %}
+{% load static %}
+{% block title %}Booking Panel{% endblock %}
+
+{% block content %}
+
+  <div class="bg bg-secondary text-dark pt-5 pb-5">
+    <div class="text-center pt-5 pb-5">
+        <h3 class="display-4 cGreen me-2 ms-2 mb-4">{% trans 'Welcome to our Booking Panel' %}!</h3>
+        <p class="fs-5 mb-4">{% trans 'You can easily book appointments up to 3 weeks in advance' %}</p>
+        <p class="fs-5 mb-4">{% blocktrans %} You have the flexibility to edit your appointment within 24 hours prior to the scheduled time
+            through your user panel {% endblocktrans %}</p>
+        <p class="fs-5 mb-4">{% blocktrans %} In any subjects feel free to reach out to us via phone or our contact form {% endblocktrans %}</p>
+        <a type="button" class="btn btn-primary btn-lg shadow mt-4" href="{% url 'booking' %}">{% trans 'Book appointment' %}</a>
+        <a type="button" class="btn btn-danger btn-lg shadow mt-4" href="{% url 'contact' %}">{% trans 'Write to us' %}</a>
+    </div>
+</div>
+
+
+{% endblock %}

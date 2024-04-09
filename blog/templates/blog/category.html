@@ -1,0 +1,14 @@
+{% extends 'blog/index.html' %}
+{% load i18n %}
+{% load markdown_extras %}
+
+{% block category %}
+
+<div class="centered-content mt-5">
+    <a href="{% url 'blog_index' %}" class="btn btn-primary mb-3">{% trans 'Back to Blog' %}</a>
+</div>
+
+{% endblock %}
+
+<h2>{{ category }}</h2>
+

@@ -1,0 +1,392 @@
+/*-- Body Reset --*/
+body {
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    color: #616971;
+  }
+  
+  /*============= TOP BAR HEADER =============*/
+  .top-bar {
+    background: #33d1e6;
+    height: 2.8rem;
+    padding: .5rem 1rem;
+    overflow: hidden;
+    position: relative;
+  }
+  .top-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  .scrolling-text {
+    animation: scroll 15s linear infinite;
+  }
+
+  @keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+  }
+  /*============= NAVIGATION =============*/
+  .navbar-brand img {
+    height: 4rem;
+    margin: 0;
+  }
+  .navbar-brand {
+    padding: 0;
+  }
+  .navbar {
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .1);
+    z-index: 1;
+  }
+  .nav-item {
+    padding: .5rem;
+  }
+  .nav-link {
+    color: 5b5555!important;
+  }
+  .nav-link.active,
+  .nav-link:hover {
+    color: #1ab3c7!important;
+  }
+  /*============= DROPDOWN BUTTON AND ICON =============*/
+  .dropdown-toggle.custom-dropdown-button {
+    background-color: transparent; 
+    border: none; 
+    padding: 0; 
+  }
+  .dropdown-toggle.custom-dropdown-button i {
+    color: #33d1e6; 
+    font-size: 2rem; 
+  }
+  .dropdown-menu .dropdown-item:hover,
+  .dropdown-menu .dropdown-item:focus,
+  .dropdown-menu .dropdown-item:active {
+      background-color: #33d1e6;
+      color: inherit;  
+  }
+  /*============= CAROUSEL =============*/
+  
+  #carouselExampleCaptions {
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, .1);
+  }
+  .carousel-inner {
+    max-height: 38rem!important;
+  }
+  /*-- Carousel Content --*/
+  .carousel-caption {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+  }
+  .bg-custom {
+    background-color: rgba(0, 0, 0, .4) ;
+    color: white;
+    border-radius: 1rem;
+  }
+  .carousel-caption h1 {
+    font-size: 3.8rem;
+    text-shadow: .1rem .1rem .3rem rgba(0, 0, 0, 1);
+  }
+  .border-primary {
+    border-top: .2rem solid #33d1e6!important;
+  }
+  .carousel-caption h3 {
+    font-size: 2.2rem;
+    text-shadow: .1rem .1rem .2rem rgba(0, 0, 0, 1);
+  }
+  .btn-lg {
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border-width: medium;
+  }
+  .btn-danger {
+    background-color: #AC2615;
+    border: .05rem solid #AC2615;
+  }
+  .btn-primary {
+    background-color: #33d1e6;
+    border: .05rem solid #33d1e6;
+  }
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background-color: #1ab3c7!important;
+    border: .05rem solid #1ab3c7!important;
+  }
+  .btn-xs {
+    font-size: 0.5rem;
+  }
+  /* three column section images */
+  .img-container {
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .img-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  /*===== FIXED BACKGROUND IMG =====*/
+  .fixed {
+    background-image: url('../images/4.jpg');
+    position: fixed;
+  }
+  .fixed-background{
+    padding: 10rem 0;
+  }
+  .fixed-primary {
+    overflow: hidden; /*-- Correction for iOS --*/
+  }
+  /*-- Emoji Navbar --*/
+  .emoji {
+    background-image: linear-gradient(to right, #33d1e6,#AC2615);
+    min-height: 0!important;
+    padding: .4rem 0!important;
+  }
+  .emoji .bi {
+    margin: 0 auto;
+    color: white;
+    font-size: 2rem;
+  }
+  .custom-container {
+    padding: 30px;
+  }
+  #jumb {
+    background-color: rgb(207, 212, 218);
+    color: rgb(83, 83, 83);
+  }
+  /*============= FOOTER =============*/
+  footer {
+    background-color: #202020 ;
+    padding: 1rem 2rem 3rem;
+  }
+  footer p, footer a,
+  .socket a {
+    color: white;
+    text-decoration: none;
+  }
+  ul.social {
+    list-style-type: none;
+    display: flex;
+    max-width: 16rem;
+    margin: 0 auto;
+    padding: 0;
+  }
+  ul.social li {
+    margin: 0 auto
+  }
+  footer .fab {
+    font-size: 2.3rem;
+  }
+  footer .fab:hover {
+    color: #1ab3c7;
+  }
+  .pages, .open-hours {
+    color: white;
+    text-align: center;
+  }
+  .pages ul,
+  .open-hours p {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+  }
+  .open-hours h5, .pages h5 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+  }
+  .text-left {
+      text-align: left;
+  }
+  .text-right {
+      text-align: right;
+  }
+  .pages a:hover,
+  .open-hours a:hover,
+  .text-right a:hover {
+    color: #1ab3c7;
+  }
+  
+  /*============= SOCKET =============*/
+  .socket {
+    background-color: black;
+    border-top: .1rem solid #1ab3c7;
+  }
+
+   /*============= MESSAGES =============*/
+  .alert-custom {
+    background: linear-gradient(90deg,#1DA1F2,#981ceb)!important;
+    color: #ffffff;
+  }
+
+  .text-custom {
+    color: #ffffff;
+    font-size: 20px;
+ }
+ /*============= SERVICES =============*/
+  #steps {
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+  }
+  .middle-paragraph {
+    text-align: left;
+    margin-top: 40;
+  }
+ /*============= WHATSAP BUTTON MOBILE =============*/
+  .whatsapp-button-wrapper {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+ /*============= ROUNDED INPUT PASSWORD =============*/
+  .rounded-form input {
+    border-radius: 10px;
+    padding: 10px; 
+    margin-bottom: 10px; 
+  }
+  
+  /*============= MEDIA QUERIES =============*/
+  @media (max-width: 767px), (max-width: 991px) {
+    ul.social {
+        max-width: 100%;
+        margin-bottom: 1rem; 
+    }
+
+    .pages ul {
+        margin-bottom: 1.5rem; 
+    }
+
+    .open-hours p {
+        margin-top: 1.5rem; 
+        margin-bottom: 1.5rem; 
+    }
+    .text-right {
+      text-align: center; 
+    }
+
+    .text-right a {
+      margin-right: 0.5rem; 
+      display: inline-block; 
+    }
+    .top-bar a {
+      font-size: 0.9rem; 
+      display: block;
+      white-space: nowrap; 
+    }
+    }
+
+
+  /* Devices under 1199px (xl) */
+  @media (max-width: 1199.98px) {
+    .carousel-caption h1 {
+      font-size: 2.8rem;
+    }
+    .carousel-caption h3 {
+      font-size: 1.8rem;
+    }
+   } 
+  /* Devices under 992px (lg) */
+  @media (max-width: 991.98px) {
+    .carousel-caption h1 {
+      font-size: 2.5rem;
+    }
+    .carousel-caption h3 {
+      font-size: 1.5rem;
+    }
+    .btn-lg {
+      font-size: .95rem;
+    }
+   }
+
+   /* Media query for mobile devices */
+  @media only screen and (max-width: 768px) {
+    .whatsapp-button-wrapper {
+        display: block; 
+        animation: pulse 1s infinite; 
+    }
+    .whatsapp-button-mobile img {
+        width: 48px;  
+        height: 48px; 
+        border-radius: 50%; 
+        transition: transform 0.2s ease-in-out; 
+    }
+    /* Define the pulsating animation */
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+}
+  
+  
+  /*============ BOOTSTRAP BREAK POINTS:
+  
+  Extra small (xs) devices (portrait phones, less than 576px)
+  No media query since this is the default in Bootstrap
+  
+  Small (sm) devices (landscape phones, 576px and up)
+  @media (min-width: 576px) { ... }
+  
+  Medium (md) devices (tablets, 768px and up)
+  @media (min-width: 768px) { ... }
+  
+  Large (lg) devices (desktops, 992px and up)
+  @media (min-width: 992px) { ... }
+  
+  Extra (xl) large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) { ... }
+  
+  =============*/
+  
+/*-- Bootstrap Mobile Gutter Fix --*/
+.row, .container-fluid {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+/*-- Fixed Background Image --*/
+.fixed-background {
+  position: relative;
+  width: 100%;
+  z-index: 1000!important;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -999 !important;
+}
+.fixed {
+  z-index: -999!important;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+}

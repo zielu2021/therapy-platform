@@ -1,0 +1,40 @@
+{% extends 'base1.html' %}
+{% load i18n %}
+{% load static %}
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+    {% load crispy_forms_tags %}
+
+    <div class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-container">
+                        <h2 class="form-title">{% trans 'Fill the form' %}</h2>
+                        <form method="post" class="formular">
+                            {% csrf_token %}
+                            {{ m|crispy }}
+                            <button type="submit" value="Sent">{% trans 'Send message' %}</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-image">
+                        <h1>Contact Us</h1>
+                    </div>
+                    <div class="contact-text">
+                        <h3>{% trans 'Understanding the mind is a journey without a final destination, and every step unveils the complexity and beauty of our inner world' %}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+
+
+

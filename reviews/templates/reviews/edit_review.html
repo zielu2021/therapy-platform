@@ -1,0 +1,35 @@
+{% extends 'base1.html' %}
+{% load i18n %}
+{% load static %}
+{% block title %}Edit Review{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+
+<div class="container mt-4 mb-2">
+    <div class="col-12 text-center">
+      <h2>{% trans 'Edit Review' %}</h2>
+      <div class="border-top border-primary w-25 mx-auto my-3"></div>
+    </div>
+</div>
+
+<div class="container mb-5">
+<div class="row justify-content-center">
+    <div class="col-md-6">
+    <div class="form-review mx-auto">
+        <form method="post" action="{% url 'edit_review' review.id %}" class="crispy-form">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div class="text-center mb-5">
+            <button type="submit" class="btn btn-primary mt-3">Save Changes</button>
+        </div>
+        </form>
+    </div>
+    </div>
+</div>
+</div>
+
+
+
+
+{% endblock %}

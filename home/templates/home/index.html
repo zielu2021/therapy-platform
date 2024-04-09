@@ -1,0 +1,305 @@
+{% extends 'base1.html' %}
+{% load i18n %}
+{% load static %}
+{% load markdown_extras %}
+{% block title %}Home{% endblock %}
+{% load stars %}
+
+{% block content %}
+ <!-- Image Carousel -->
+    <!-- Carousel Content -->
+    <!-- End Carousel Content -->
+    <!-- Previous & Next Buttons -->
+    <!-- End Previous & Next Buttons -->
+
+    <!-- here bellow ready carousel from boostrap -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+      </div>
+
+      <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="4000">
+              <img src="{% static 'images/home_0.WEBP' %}" class="d-block w-100" alt="...">
+              <div class="carousel-caption">
+                  <div class="container">
+                      <div class="row justify-content-center">
+                          <div class="col-8 bg-custom d-none d-md-block py-3 px-0">
+                              <h1>At Home</h1>
+                              <div class="border-top border-primary w-50 mx-auto my-3"></div>
+                              <h3 class="pb-3">{% trans 'your psychologist online' %}</h3>
+                              <a href="{% url 'bookingIndex' %}" class="btn btn-danger btn-lg mr-2">{% trans 'BOOK APPOINTMENT' %}</a>
+                              <a href="#" class="btn btn-primary btn-lg ml-2">{% trans 'READ MORE' %}</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="carousel-item" data-bs-interval="4000">
+              <img src="{% static 'images/home_1.WEBP' %}" class="d-block w-100" alt="...">
+              <div class="carousel-caption">
+                  <div class="container">
+                      <div class="row justify-content-end text-center">
+                          <div class="col-5 bg-custom d-none d-md-block py-3 px-0 pr-3">
+                              <p class="lead pb-3">{% trans "Feel free to reach out to us in a way that's most convenient for you" %}
+                              </p>
+                              <a href="{% url 'contact' %}" class="btn btn-danger btn-lg">{% trans 'Write here' %}</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="carousel-item" data-bs-interval="4000">
+              <img src="{% static 'images/home_2.WEBP' %}" class="d-block w-100" alt="...">
+              <div class="carousel-caption">
+                  <div class="container">
+                      <div class="row justify-content-start text-center">
+                          <div class="col-7 bg-custom d-none d-lg-block py-3 px-0 pl-3">
+                              <h3 class="pb-3">{% trans 'Individual and Couples Counseling' %}</h3>
+                              <p class="lead">{% trans 'Your journey to a healthier, happier you begins here' %}</p>
+                              <a href="{% url 'service' %}"  class="btn btn-primary btn-lg">{% trans 'How it works' %}</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Image Carousel -->
+
+
+      <!-- Main Page Heading -->
+      <div class="col-12 text-center mt-5">
+          <h1 class="text-dark pt-4">{% trans 'Stay in your comfort zone' %}</h1>
+          <div class="border-top border-primary w-25 mx-auto my-3"></div>
+          <p class="lead">{% trans ' Our team is dedicated to providing professional assistance for your mental well-being online' %}</p>
+      </div>
+      
+      <!-- Three Column Section -->
+      <div class="container">
+          <div class="row my-5">
+
+              <div class="col-md-4 my-4 text-center">
+                <div class="img-container">
+                    <img src="{% static 'images/steps.jpg' %}" alt="" >
+                </div>
+                    <h4 class="my-4">{% trans 'Ascend or Descend' %}?</h4>
+                    <p>{% trans 'Choose wisely, and allow us to guide you to the summit of well-being' %}!</p>
+                    <p>{% trans 'Explore more about our therapeutic steps tailored to enhance your emotional and mental state' %}. </p>
+                        <div class="mb-5"></div>
+                    <a href="{% url 'service' %}" class="btn btn-outline-dark btn-md">{% trans 'Explore Further' %}</a>
+              </div>
+
+              <div class="col-md-4 my-4 text-center">
+                <div class="img-container">
+                    <img src="{% static 'images/piggy.jpg' %}" alt="" >
+                </div>
+                    <h4 class="my-4">{% trans 'Optimize Savings with Our Exclusive Plans!' %}</h4>
+                    <p>{% trans 'Many of us appreciate the value of saving.'%}{% trans 'Select the meticulously crafted plan that suits you best, and experience a boost in both mental well-being and financial satisfaction.' %} 
+                        {% trans 'Choose happiness for your mind and wallet with our thoughtfully tailored options' %}</p>
+                    <div class="mb-5"></div>
+                    <a href="#" class="btn btn-outline-dark btn-md">{% trans 'Explore Our Packages' %}</a>
+              </div>
+
+
+              <div class="col-md-4 my-4 text-center">
+                {% if latest_post %}
+                    <div class="img-container">
+                        <img src="{{ latest_post.image.url }}" alt="{{ latest_post.title }}">
+                    </div>
+                    <h4 class="my-4">
+                        {% if request.LANGUAGE_CODE == 'es' and latest_post.title_es %}
+                            {{ latest_post.title_es | slice:"30" }}
+                        {% else %}
+                            {{ latest_post.title | slice:":30" }}
+                        {% endif %}
+                    </h4>
+                    <p>
+                        {% if request.LANGUAGE_CODE == 'es' and latest_post.body_es %}
+                            {{ latest_post.body_es | slice:":220"| markdown | safe }}
+                        {% else %}
+                            {{ latest_post.body | slice:":220"| markdown | safe }}
+                        {% endif %}
+                    </p>
+                    <div class="mb-5"></div>
+                    <a href="{% url 'blog_index' %}" class="btn btn-outline-dark btn-md">
+                        {% trans 'Read more & enjoy' %}
+                    </a>
+                {% else %}
+                    <p class="text-center text-dark">{% trans 'No posts available.' %}</p>
+                {% endif %}
+              </div>
+             
+          </div>
+      </div>
+
+      <!-- End Three Column Section -->
+
+
+      <!-- Emoji Navbar First -->
+      <a class="navbar bg-primary emoji" data-bs-target="#emoji" role="button" data-bs-toggle="collapse">
+          
+      </a>
+
+      <!-- Start Fixed Background IMG -->
+      <div class="fixed-background">
+
+
+          <div class="row text-light py-5">
+              <div class="col-12 text-center">
+                  <h1>{% trans 'Embarking on the Path to Mental Well-being' %}</h1>
+                  <h3 class="py-4">{% trans 'From expert professionals to tailored solutions' %},</h3>
+                  <h3 class="py-4">{% trans 'discover the unique benefits that make us the ideal choice for your mental health and personal growth' %},</h3>
+
+
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#modal1" class="btn btn-primary btn-lg mr-2">{% trans 'Theory' %}</button>
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#modal2" class="btn btn-danger btn-lg ml-2">{% trans 'Practise' %}</button>
+              </div>
+          </div>
+
+          <div class="fixed-wrap">
+              <div class="fixed"></div>
+          </div>
+      </div>
+      <!-- End Fixed Background IMG -->
+
+
+      <!-- Emoji Navbar Second -->
+      <a class="navbar bg-primary emoji" data-bs-target="#emoji" role="button" data-bs-toggle="collapse">
+          <i class="bi bi-arrow-down-circle-fill"></i><i class="bi bi-emoji-smile"></i><i class="bi bi-arrow-down-circle-fill"></i>
+      </a>
+
+      <!-- second option- depense of final emoji here -->
+      <div class="collapse" id="emoji">
+          <div class="container">
+              <div class="row text-center">
+                  <div class="col-6 col-md-3 mb-3 mb-md-0">
+                      <img src="{% static 'images/emoji2.png' %}" alt="" class="w-50">
+                      <p>{% trans 'PERSONAL QUALIFIED' %}</p>
+                  </div>
+                  <div class="col-6 col-md-3 mb-3 mb-md-0">
+                      <img src="{% static 'images/emoji1.png' %}" alt="" class="w-50">
+                      <p>{% trans 'EVIDENCE-BASED THERAPY' %}</p>
+                  </div>
+                  <div class="col-6 col-md-3 mb-3 mb-md-0">
+                      <img src="{% static 'images/emoji3.png' %}" alt="" class="w-50">
+                      <p>{% trans 'PROFESSIONAL CONFIDENTIALITY' %}</p>
+                  </div>
+                  <div class="col-6 col-md-3">
+                      <img src="{% static 'images/emoji4.png' %}" alt="" class="w-50">
+                      <p>{% trans 'DEDICATION TO YOUR WELLNESS' %}</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Modal Popup -->
+
+      <!-- first modal -->
+      <div class="modal" id="modal1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-center">{% trans '"The best way out is always through. In therapy, we find the tools to navigate the through." - Robert Frost' %}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <img src="{% static 'images/gifs/1.gif' %}" alt="" class="w-100">
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <!-- second modal -->
+      <div class="modal" id="modal2">
+           <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                  <h5 class="modal-title text-center">{% blocktrans %} Exceptionally positive responses from our clients highlight 
+                    that every individual experiences significant improvements in their well-being after a brief period of 
+                    therapy {% endblocktrans %}</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+              <div class="modal-body">
+                <img src="{% static 'images/gifs/2.gif' %}" alt="" class="w-100">
+              </div>
+          </div>
+      </div>
+      </div>
+
+      <!-- Start Three Column Section -->
+      <div class="container my-3">
+        <div class="row py-4">
+    
+            <!-- Left box for text -->
+            <div class="col-lg-4 text-center">
+                <h1 class="text-dark text-center font-weight-bold mb-3">{% trans 'Join the satisfied customers' %}</h1>
+                <p class="text-justify mb-4">{% blocktrans %}Explore the insightful testimonials from our clients in the realm of online psychology. Take a moment to delve into the reviews, discovering the positive experiences others have had.{% endblocktrans %}</p>
+                <div class="mb-3">
+                    <a href="{% url 'all_reviews' %}" class="btn btn-outline-dark btn-lg">{% trans 'All testimonials' %}</a>
+                </div>
+            </div>
+            
+            
+            
+            <!-- Middle box for carousel reviews -->
+            <div class="col-lg-4 text-justify" style="height: 320px;">
+                <h2 class="text-dark text-center font-weight-bold">{% trans 'Last Reviews' %}</h2>
+                
+                {% if reviews %}
+                    <div id="reviewCarousel" class="carousel slide" data-ride="carousel" data-bs-ride="carousel">
+                        <div class="carousel-inner text-center">
+                            {% for review in reviews %}
+                                <div class="carousel-item {% if forloop.first %}active{% endif %}" data-bs-interval="3000">
+                                    <p class="text-dark fst-italic">{% trans 'Author' %}: {{ review.author.username }}</p>
+                                    <p>{{ review.text | slice:":300"}}</p>
+                                    <p class="text-dark fw-bold">{{ review.rating|stars }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% else %}
+                    <p class="text-center text-dark">{% trans 'No reviews available.' %}</p>
+                {% endif %}
+            </div>
+            
+    
+            <!-- Right box for image -->
+            <div class="col-lg-4 mt-5">
+                <img src="{% static 'images/code.jpg' %}" alt="" class="w-100">
+            </div>
+        </div>
+    </div>
+      <!-- End Three Column Section -->
+
+
+      <!-- Start Jumbotron -->
+      <div id="jumb" class="jumbotron py-5 mb-0">
+          <div class="container">
+              <div class="row">
+
+                  <div class="col-md-7 col-lg-8 col-xl-9 my-auto text-center">
+                      <h4>
+                        {% trans 'Register and enjoy professional e-assistance in your daily life' %}<br>
+                        {% trans 'Regularly updated database of free guides' %}
+                    </h4>
+                  </div>
+
+                  <div class="col-md-5 col-lg-4 col-xl-3 pt-4 pt-md-0 mt-2">
+                      <a href="{% url 'userPanel' %}" class="btn btn-primary btn-lg">{% trans 'Free e-books' %}</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- End Jumbotron -->
+
+
+
+{% endblock %}

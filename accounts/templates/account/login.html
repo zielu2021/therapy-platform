@@ -1,0 +1,35 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'Login' %}{% endblock  %}
+
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+{% load crispy_forms_tags %}
+
+<div class="contact-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="form-container">
+                    <h2 class="form-title">{% trans 'Login' %}</h2>
+                    <form method="post" class="formular">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <button type="submit" class="btn btn-success">{% trans 'Login' %}</button>
+                    </form>
+                    <div class="login-options">
+                        <p>{% trans "Don't have an account" %}? <a href="{% url 'account_signup' %}">{% trans "Sign up here" %}</a>!</p>
+                        <p><a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-google">{% trans 'Continue with Google' %}</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+ 
+

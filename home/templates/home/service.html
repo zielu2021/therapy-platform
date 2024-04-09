@@ -1,0 +1,117 @@
+{% extends 'base1.html' %}
+{% load i18n %}
+{% load static %}
+{% block title %} {% trans 'Service' %} {% endblock %}
+
+{% block content %}
+<section style="background-image: linear-gradient(90deg,#a7eaff,#edf4f5)!important;">
+    <div class="col-12 text-center">
+        <h1 class="text-dark pt-4">{% trans 'Steps of therapy' %}</h1>
+        <div class="border-top border-primary w-25 mx-auto my-3"></div>
+        <p class="lead">{% trans 'In your way for better future' %}</p>
+    </div>
+
+    <section class="container rounded" style="background-image: linear-gradient(90deg,#edf4f5,#a7eaff)!important;">
+        <!-- Step 1: Evaluation -->
+        <div class="row mb-5">
+            <div class="col-md-3 mt-5">
+                <img src="{% static 'images/step_1.jpg' %}" alt="Evaluation Image" class="img-fluid rounded" style="max-width: 100%; height: auto;">
+            </div>
+            <div id="steps" class="col-md-8 text-center mt-auto mb-auto">
+                <div class="display:flex">
+                    <h4 class="fw-bold">{% trans 'Step 1: Evaluation' %}</h4>
+                </div>
+                <div>
+                    <p>{% trans 'In the initial sessions, your psychologist seeks to understand what you are going through and what has led to the discomfort and problems you are facing.' %}</p>
+                </div>
+                <div class="rounded fst-italic" style="background-color: rgb(255, 255, 255);">
+                    <p>{% trans 'Duration: between 3-4 sessions (depending on the problem and its duration)' %}</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Step 2: Understanding the Problem -->
+        <div class="row mb-5">
+            <div id= "steps" class="col-md-8 text-center mt-auto mb-auto">
+                <div>
+                    <h4 class="fw-bold">{% trans 'Step 2: Understanding the Problem' %}</h4>
+                </div>
+                <div>
+                    <p>{% trans 'Your psychologist conducts a thorough analysis of what is sustaining the problem. They teach you to understand why this is happening and what steps you can take to progress and make changes.' %}</p>
+                </div>
+                <div class="rounded fst-italic" style="background-color: rgb(255, 255, 255);">
+                    <p>{% trans 'Duration: 1 session' %}</p>
+                </div>
+            </div>
+            <div class="col-md-3 order-md-2">
+                <img src="{% static 'images/step_2.jpg' %}" alt="Understanding Image" class="img-fluid rounded" style="max-width: 100%; height: auto;">
+            </div>
+        </div>
+        <hr>
+
+        <!-- Step 3: Intervention -->
+        <div class="row mb-5">
+            <div class="col-md-3">
+                <img src="{% static 'images/step_3.jpg' %}" alt="Evaluation Image" class="img-fluid rounded" style="max-width: 100%; height: auto;">
+            </div>
+            <div id= "steps" class="col-md-8 text-center mt-auto mb-auto">
+                <div>
+                    <h4 class="fw-bold">{% trans 'Step 3: Intervention' %}</h4>
+                </div>
+                <div>
+                    <p>{% trans 'With the help of your therapist, you learn strategies to address and solve problems. This is where changes occur, and the previously set objectives are achieved.' %}</p>
+                </div>
+                <div class="rounded fst-italic" style="background-color: rgb(255, 255, 255);">
+                    <p>{% trans 'Duration: depends on the objectives to be achieved and the pace of each individual.' %}</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!-- Step 4: Therapeutic Discharge -->
+        <div class="row mb-5">
+            <div id= "steps" class="col-md-8 mb-5 text-center mt-auto mb-auto">
+                <div class="text-center">
+                    <h4 class="fw-bold">{% trans 'Step 4: Therapeutic Discharge' %}</h4>
+                </div>
+                <div>
+                    <p>{% trans 'Therapeutic discharge marks the end of the treatment. It occurs when you express satisfaction and feel that you have met your improvement expectations.' %}</p>
+                </div>
+                <div class="rounded fst-italic" style="background-color: rgb(255, 255, 255);">
+                    <p>{% trans 'After therapeutic discharge, long-term follow-up sessions can be scheduled.' %}</p>
+                </div>
+            </div>
+            <div class="col-md-3 order-md-2 mb-5">
+                <img src="{% static 'images/step_2.jpg' %}" alt="Understanding Image" class="img-fluid rounded" style="max-width: 100%; height: auto;">
+            </div>
+        </div>
+    </section>
+
+    <div id="jumb" class="jumbotron text-center d-flex align-items-center"> 
+        <div class="container">
+            <div class="row">
+                <!-- Left Area: Text -->
+                <div class="col-md-4 d-flex align-items-center justify-content-center">
+                <div>
+                    <h1>{% trans 'Take a delightful stroll through our Plans and Pricing' %}! </h1>
+                    <p>{% trans 'Your path to well-being begins with selecting the perfect plan for your mental health and financial considerations' %}</p>
+                </div>
+            </div>
+
+                <!-- Middle Area: Image -->
+                <div class="col-md-4">
+                    <img src="{% static 'images/tarifas.jpg' %}" alt="Plan Image" class="img-fluid rounded-circle m-3">
+                </div>
+
+                <!-- Right Area: Button -->
+                <div class="col-md-4 d-flex align-items-center justify-content-center"> 
+                    <div>
+                        <a href="{% url 'bookingIndex' %}" class="btn btn-primary btn-lg mb-3" role="button">{% trans 'Book appointment' %}</a>
+                        <p class="mt-3">{% trans "Don't miss out - sign up today and find out about the awesome treats waiting just for you" %}!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

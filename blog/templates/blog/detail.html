@@ -1,0 +1,74 @@
+{% extends 'base1.html' %}
+{% load i18n %}
+{% load static %}
+{% load markdown_extras %}
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
+
+<div class="centered-content mt-5 custom-width">
+    <a href="{% url 'blog_index' %}" class="btn btn-primary mb-3">{% trans 'Back to Blog' %}</a>
+
+        <div class="post">
+            <img src="{{ post.image.url }}" alt="{{ post.title }}">
+            <div class="post-content">
+                <h2 class="post-title">
+                    {% if request.LANGUAGE_CODE == 'es' and post.title_es %}
+                        {{ post.title_es }}
+                    {% else %}
+                        {{ post.title }}
+                    {% endif %}
+                </h2>
+                <div class="post-meta">
+                    <span class="post-date">{{ post.created_on.date }} | Categories:</span>
+                    <span class="post-category">
+                        {% for category in post.categories.all %}
+                            <a href="{% url 'blog_category' category.name %}">
+                                {% if request.LANGUAGE_CODE == 'es' and category.name_es %}
+                                    {{ category.name_es }}
+                                {% else %}
+                                    {{ category.name }}
+                                {% endif %}
+                            </a>
+                        {% endfor %}
+                    </span>
+                </div>
+                <p>
+                    {% if request.LANGUAGE_CODE == 'es' and post.body_es %}
+                        {{ post.body_es | markdown | safe }}
+                    {% else %}
+                        {{ post.body | markdown | safe }}
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Comments Section -->
+        <h3>{% trans 'Leave a comment' %}:</h3>
+        <form method="post" | crispy>
+        {% csrf_token %}
+        <div>
+            {{ form.author }}
+        </div>
+        <div class="comment-body">
+            {{ form.body }}
+        </div>
+        <div class="comment-button">
+            <button type="submit" class="btn btn-primary">{% trans 'Submit' %}</button>
+        </div>
+        </form>
+        <h3>{% trans 'Comments' %}:</h3>
+        {% for comment in comments %}
+            <p>
+                {% trans 'On' %} {{ comment.created_on }} <b>{{ comment.author }}</b> {% trans 'wrote' %}: 
+            </p>
+            <p>
+                {{ comment.body }}
+            </p>
+        {% endfor %}
+</div>
+
+{% endblock %}
+
